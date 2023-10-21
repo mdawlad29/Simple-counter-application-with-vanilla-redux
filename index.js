@@ -6,10 +6,15 @@ const decrementEl = document.getElementById("decrement");
 // action identifiers
 const INCREMENT = "increment";
 const DECREMENT = "decrement";
+const ITEST = "itest";
 
 // initial state
 const initialState = {
   value: 0,
+  properties: {
+    a: 3,
+    b: 4,
+  },
 };
 
 // action creators
@@ -38,6 +43,15 @@ function counterReducer(state = initialState, action) {
       ...state,
       value: state.value - action.payload,
     };
+  } else if (action.type === ITEST) {
+    const updatedSate = {
+      ...state,
+      properties: {
+        ...state.properties,
+        b: state.properties.b + 10,
+      },
+    };
+    return updatedSate;
   } else {
     return state;
   }
