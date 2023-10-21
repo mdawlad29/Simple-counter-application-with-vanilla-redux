@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/redux@4.2.1/dist/redux.min.js"></script>
+  </head>
+
+  <body class="bg-gray-100">
+    <div class="flex justify-center items-center h-screen">
+      <!-- Counter -->
+      <div class="space-y-8">
+        <h1 class="text-xl text-center font-bold">
+          Simple Counter Application
+        </h1>
+        <div class="bg-white shadow-lg p-7 w-96 text-center space-y-5">
+          <h1 id="counter" class="text-xl font-bold">0</h1>
+          <div class="flex justify-center items-center gap-5">
+            <button
+              id="increment"
+              class="px-4 py-1 rounded-md bg-blue-500 text-white"
+            >
+              Increment</button
+            ><button
+              id="decrement"
+              class="px-4 py-1 rounded-md bg-red-400 text-white"
+            >
+              Decrement
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
